@@ -98,10 +98,8 @@
     <p class="Lesson_content">TEXT_CONTENT</p>
 </div>
 <div id="native_action">
-    <button type="button" onclick="sendNativeAction()">Lancer l'action native</button>
+    <button type="button" onclick="showMessage()">Lancer l'action native</button>
 </div>
-
-
 <script>
         function displayLineNumbers() {
             var Lines_count         = document.getElementById("Lines_count");
@@ -119,7 +117,11 @@
             var nativeMessageToDisplay = "Bien joué !";
             window.location.href = "native://"+encodeURIComponent(nativeMessageToDisplay);
         }
-
- </script>
+</script>
+<script>
+    function showMessage() {
+        Android.showMessage("Bien joué !!");
+    }
+</script>
 </body>
 </html>
